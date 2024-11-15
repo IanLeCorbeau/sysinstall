@@ -13,7 +13,8 @@ COMPONENTS	= main non-free-firmware
 # System config
 HOSTNAME	= debian		# system hostname
 TIMEZONE	= America/Montreal	# see docs/lists/tz.list
-LOCALE		= en_CA.UTF-8 UTF-8	# see docs/lists/locales.list
+LOCALE		= en_CA.UTF-8		# see docs/lists/locales.list
+CHARSET		= UTF-8			# see docs/lists/locales.list
 KB_LAYOUT	= ca			# see docs/lists/xkblayout.list
 KB_VARIANT	= French (Canada)	# see docs/lists/xkblayout.list
 

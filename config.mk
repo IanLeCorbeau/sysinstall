@@ -20,7 +20,9 @@ KB_VARIANT	= French (Canada)	# see docs/lists/xkblayout.list
 
 # sources.list or *.sources files for
 # the system.
-SOURCES		= sources/sources.list
+SOURCES		= "deb http://deb.debian.org/debian/ bookworm ${COMPONENTS}" \
+		  "deb http://security.debian.org/debian-security bookworm-security ${COMPONENTS}" \
+		  "deb http://deb.debian.org/debian/ bookworm-updates ${COMPONENTS}"
 
 # Packages that should be installed along with the base system.
 # Not all packages should be installed here.

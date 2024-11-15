@@ -23,7 +23,7 @@ SOURCES		= sources/sources.list
 
 # Packages that should be installed along with the base system.
 # Not all packages should be installed here.
-PACKAGES	= usrmerge ca-certificates
+PACKAGES	= 
 
 # Packages that should be installed in the chroot after the base system.
 PACKAGES_CHROOT	= 

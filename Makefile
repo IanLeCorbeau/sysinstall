@@ -9,6 +9,7 @@ bootstrap:
 		--essential-hook='./settz ${TARGET} ${TIMEZONE}' \
 		--customize-hook='./setlocale ${TARGET} ${LOCALE} ${CHARSET}' \
 		--hook-directory=hooks/${DISTRO} \
+		--skip=check/empty \
 		${FLAVOUR} ${TARGET} \
 		${SOURCES}
 

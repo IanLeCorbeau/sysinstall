@@ -6,8 +6,6 @@ set -e
 
 _target=$1
 _tz=$2
-_locale=$3
-_charset=$4
 _area=${_tz%%/*}
 _zone=${_tz##*/}
 
@@ -21,8 +19,3 @@ echo 'tzdata tzdata/Zones/Etc select UTC' \
 # as the default timezone for whatever stupid reason.
 echo "${_area}/${_zone}" > "${_target}"/etc/timezone
 chroot "${_target}" ln -sf /usr/share/zoneinfo/"${_area}"/"${_zone}" /etc/localtime
-
-echo "locales locales/default_environment_locale select $_locale" \
-	| chroot "${_target}" debconf-set-selections
-echo "locales locales/locales_to_be_generated multiselect $_locale $_charset" \
-	| chroot "${_target}" debconf-set-selections

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+_target=$1
+_locale=$2
+_charset=$3
+
+echo "locales locales/default_environment_locale select $_locale" \
+	| chroot "${_target}" debconf-set-selections
+echo "locales locales/locales_to_be_generated multiselect $_locale $_charset" \
+	| chroot "${_target}" debconf-set-selections
+chroot "$_target" apt-get install locales -y
